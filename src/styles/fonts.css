@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+  /* Display — headings, recipient names, app title */
+  --font-display: 'Lora', 'Georgia', serif;
+
+  /* Body — letter content, form fields, UI copy */
+  --font-body: 'Crimson Pro', 'Palatino Linotype', serif;
+
+  /* Mono — countdown digits only */
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* UI — buttons, labels, navigation (small, functional text) */
+  --font-ui: 'DM Sans', 'Helvetica Neue', sans-serif;
+}

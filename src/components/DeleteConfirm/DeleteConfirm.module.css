@@ -1,0 +1,61 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: var(--color-bg-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 110;
+  animation: fadeIn var(--duration-normal) var(--ease-standard);
+}
+
+.modal {
+  background-color: var(--color-bg-form);
+  width: 90%;
+  max-width: 400px;
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-overlay);
+  text-align: center;
+}
+
+.title {
+  font-size: var(--text-lg);
+  color: var(--color-ink-primary);
+  margin-bottom: var(--space-4);
+}
+
+.description {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--color-ink-secondary);
+  margin-bottom: var(--space-8);
+  line-height: var(--leading-normal);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.cancelButton, .confirmButton {
+  flex: 1;
+  padding: var(--space-3);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: opacity var(--duration-fast) var(--ease-standard);
+}
+
+.cancelButton {
+  background-color: var(--color-border);
+  color: var(--color-ink-primary);
+}
+
+.confirmButton {
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.cancelButton:hover, .confirmButton:hover {
+  opacity: 0.85;
+}

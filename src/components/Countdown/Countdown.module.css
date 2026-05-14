@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.segment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  color: var(--color-ink-primary);
+  line-height: 1;
+  animation: digitFlip 1s infinite var(--ease-standard);
+}
+
+.label {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  letter-spacing: var(--tracking-widest);
+  margin-top: var(--space-1);
+}
+
+.separator {
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  color: var(--color-ink-muted);
+  padding-bottom: var(--space-4); /* Align with digits */
+}
+
+@keyframes digitFlip {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-1px); opacity: 0.9; }
+}

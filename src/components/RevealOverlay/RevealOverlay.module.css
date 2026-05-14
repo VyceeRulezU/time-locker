@@ -1,0 +1,42 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.sealEffect {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-seal-primary);
+  z-index: 10;
+  animation: sealCrack var(--duration-ceremony) var(--ease-ceremony) forwards;
+  pointer-events: none;
+}
+
+.content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--duration-normal) var(--ease-standard), 
+              transform var(--duration-normal) var(--ease-standard);
+}
+
+.unfolding {
+  opacity: 0.3;
+  transform: scaleY(0.95);
+  animation: paperUnfold var(--duration-ceremony) var(--ease-ceremony) forwards;
+}
+
+.revealed {
+  opacity: 1;
+  transform: translateY(0) scaleY(1);
+}
+
+@keyframes sealCrack {
+  0% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.1); filter: brightness(1.2); }
+  100% { opacity: 0; transform: scale(1.2); }
+}
+
+@keyframes paperUnfold {
+  from { transform: scaleY(0.92); }
+  to { transform: scaleY(1); }
+}
