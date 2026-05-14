@@ -70,10 +70,12 @@ time-locked-letters/
 │   ├── App.tsx
 │   └── main.tsx
 ├── docs/
-│   ├── README.md               ← you are here
-│   ├── ARCHITECTURE.md
-│   ├── COMPONENT_GUIDE.md
-│   └── DESIGN_SYSTEM.md
+│   ├── 01-explanation.md       ← beginner-friendly walkthrough
+│   ├── 02-principles.md        ← engineering principles
+│   ├── 03-audit.md             ← technical audit
+│   ├── 04-cross-check.md       ← cross-check analysis
+│   ├── 05-tinker.md            ← live behaviour verification
+│   └── 06-lie-detector.md      ← statement verification
 ├── index.html
 ├── vite.config.ts
 ├── tsconfig.json
@@ -156,9 +158,14 @@ The app is a static site — drop the `dist/` folder anywhere:
 
 - **Vercel**: connect the repo, zero config needed
 - **Netlify**: drag and drop `dist/` or connect via Git
-- **GitHub Pages**: use `gh-pages` package to publish `dist/`
+- **GitHub Pages**: the `vite.config.ts` sets `base: '/time-locker/'` for subpath deployment
 
 No environment variables required.
+
+### Live Site
+
+- **Deployed:** [vyceerulezu.github.io/time-locker](https://vyceerulezu.github.io/time-locker/)
+- **Repository:** [github.com/VyceeRulezU/time-locker](https://github.com/VyceeRulezU/time-locker)
 
 ---
 
